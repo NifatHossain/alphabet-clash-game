@@ -13,11 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
 </head>
-<body class="bg-[#010313] min-h-screen bg-[url('images/background.png')] bg-no-repeat bg-center">
+<body class="bg-[#010313] min-h-screen bg-[url('images/stars.jpg')] bg-no-repeat bg-cover bg-center">
     <section id="homePage" class="">
         <div class="flex flex-col items-center min-h-screen justify-center gap-4">
-            <h1 class="text-8xl text-white font-extrabold">ALPHABET CLASH</h1>
-            <P class="text-white">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</P>
+            <h1 class="text-4xl md:text-8xl text-white text-center font-extrabold">ALPHABET CLASH</h1>
+            <P class="text-white text-center">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</P>
             <button id="playBtn" class="btn">Play Now</button>
         </div>
     </section>
@@ -37,61 +37,64 @@
             </div>
     
             <!-- keyboard -->
-            <div>
-                <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd id="q" class="kbd">q</kbd>
-                    <kbd id="w" class="kbd">w</kbd>
-                    <kbd id="e" class="kbd">e</kbd>
-                    <kbd id="r" class="kbd">r</kbd>
-                    <kbd id="t" class="kbd">t</kbd>
-                    <kbd id="y" class="kbd">y</kbd>
-                    <kbd id="u" class="kbd">u</kbd>
-                    <kbd id="i" class="kbd">i</kbd>
-                    <kbd id="o" class="kbd">o</kbd>
-                    <kbd id="p" class="kbd">p</kbd>
-                  </div> 
-                  <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd id="a" class="kbd">a</kbd>
-                    <kbd id="s" class="kbd">s</kbd>
-                    <kbd id="d" class="kbd">d</kbd>
-                    <kbd id="f" class="kbd">f</kbd>
-                    <kbd id="g" class="kbd">g</kbd>
-                    <kbd id="h" class="kbd">h</kbd>
-                    <kbd id="j" class="kbd">j</kbd>
-                    <kbd id="k" class="kbd">k</kbd>
-                    <kbd id="l" class="kbd">l</kbd>
-                  </div> 
-                  <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd id="z" class="kbd">z</kbd>
-                    <kbd id="x" class="kbd">x</kbd>
-                    <kbd id="c" class="kbd">c</kbd>
-                    <kbd id="v" class="kbd">v</kbd>
-                    <kbd id="b" class="kbd">b</kbd>
-                    <kbd id="n" class="kbd">n</kbd>
-                    <kbd id="m" class="kbd">m</kbd>
-                    <kbd id="/" class="kbd">/</kbd>
-                  </div>
+            <div class="flex justify-center">
+                <div class="scale-75 md:scale-150 w-fit ">
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
+                        <kbd id="e" class="kbd">e</kbd>
+                        <kbd id="r" class="kbd">r</kbd>
+                        <kbd id="t" class="kbd">t</kbd>
+                        <kbd id="y" class="kbd">y</kbd>
+                        <kbd id="u" class="kbd">u</kbd>
+                        <kbd id="i" class="kbd">i</kbd>
+                        <kbd id="o" class="kbd">o</kbd>
+                        <kbd id="p" class="kbd">p</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="a" class="kbd">a</kbd>
+                        <kbd id="s" class="kbd">s</kbd>
+                        <kbd id="d" class="kbd">d</kbd>
+                        <kbd id="f" class="kbd">f</kbd>
+                        <kbd id="g" class="kbd">g</kbd>
+                        <kbd id="h" class="kbd">h</kbd>
+                        <kbd id="j" class="kbd">j</kbd>
+                        <kbd id="k" class="kbd">k</kbd>
+                        <kbd id="l" class="kbd">l</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="z" class="kbd">z</kbd>
+                        <kbd id="x" class="kbd">x</kbd>
+                        <kbd id="c" class="kbd">c</kbd>
+                        <kbd id="v" class="kbd">v</kbd>
+                        <kbd id="b" class="kbd">b</kbd>
+                        <kbd id="n" class="kbd">n</kbd>
+                        <kbd id="m" class="kbd">m</kbd>
+                        <kbd id="/" class="kbd">/</kbd>
+                      </div>
+                </div>
             </div>
     
             <!-- Life & score -->
             <div class="flex justify-around">
-                <button class="btn bg-purple-500 border-0 text-white font-semibold"> Life <img src="images/life.png" alt=""> <span>1</span></button>
-                <button class="btn bg-purple-500 border-0 text-white font-semibold"> Score <img src="images/dollar.png" alt=""> <span>1</span></button>
+                <button class="btn bg-purple-500 border-0 text-white font-semibold"> Life <img src="images/life.png" alt=""> <span id="life">1</span></button>
+                <button class="btn bg-purple-500 border-0 text-white font-semibold"> Score <img src="images/dollar.png" alt=""> <span id="score">1</span></button>
             </div>
         </div>
     </section>
 
     <!-- Score Board -->
-    <section id="score" class="hidden">
+    <section id="scorePage" class="hidden">
         <div class="flex justify-center min-h-screen items-center">
-            <div class="flex flex-col justify-center items-center border-0 w-fit rounded-lg bg-[#FFFFFF8F] p-11 gap-3">
-                <h2 class="text-5xl text-white font-bold">Score: <span>14</span></h2>
-                <button class="btn bg-white w-fit px-3 font-bold">Play Again</button>
+            <div class="flex flex-col justify-center items-center border-0 w-fit rounded-lg bg-[#FFFFFF8F] p-11 gap-3 scale-100 md:scale-150">
+                <h2 class="text-5xl text-white font-bold">Score: <span id="finalScore">14</span></h2>
+                <button onclick="startPlay()" class="btn bg-white w-fit px-3 font-bold">Play Again</button>
                 <p class="text-white">Practice Will Make You Pro</p>
             </div>
         </div>
     </section>
 
     <script src="scripts/script.js"></script>
+    <script src="scripts/utility.js"></script>
 </body>
 </html>
